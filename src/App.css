@@ -1,8 +1,28 @@
-html, body, #root {
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  border-radius: 16px;
+  padding: 0.75rem 1.5rem;
+  background-color: #f4ce14;
+  color: #000;
+  font-weight: bold;
+}
+
 
 /* Base styles are same as previously provided */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
@@ -37,28 +57,56 @@ nav a {
 /* Hero Section */
 .hero {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 2rem;
   background-color: #495e57;
-  color: #fff;
-  flex-wrap: wrap;
+  color: white;
+  padding: 4rem 2rem;
 }
 
 .hero .text {
-  flex: 1 1 300px;
+  flex: 1 1 350px;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #f4ce14;
+}
+
+.hero p {
+  font-size: 16pt;
+  margin-bottom: 1.5rem;
 }
 
 .hero img {
   flex: 1 1 300px;
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: 16px;
 }
+
 
 /* Specials Section */
 .specials {
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
+  background-color: #fff;
   text-align: center;
+}
+
+.specials h2 {
+  font-size: 40pt;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.menu-btn {
+  margin-top: 1rem;
+  background-color: #f4ce14;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .cards {
@@ -69,67 +117,98 @@ nav a {
 }
 
 .card {
-  background-color: #f9f9f9;
-  border-radius: 8px;
+  background-color: #edefee;
+  border-radius: 16px;
   overflow: hidden;
   text-align: left;
+  padding-bottom: 1rem;
 }
 
 .card img {
   width: 100%;
+  height: auto;
+  border-bottom: 4px solid #495e57;
 }
 
-.card h3, .card p {
-  margin: 1rem;
+.card h3 {
+  font-size: 24px;
+  margin: 1rem 1rem 0.25rem;
 }
 
-.menu-btn {
-  background-color: #f4ce14;
-  color: #000;
-  padding: 0.7rem 1.5rem;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  margin-top: 1rem;
+.card .price {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ee9972;
+  margin: 0 1rem;
 }
+
+.card p {
+  font-size: 16px;
+  margin: 0.5rem 1rem;
+}
+
 
 /* Testimonials */
 .testimonials {
-  background-color: #eee;
-  padding: 3rem 2rem;
+  background-color: #edefee;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonials h3 {
+  font-size: 32px;
+  margin-bottom: 2rem;
 }
 
 .testimonials .grid {
   display: grid;
-  gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
 }
 
 .testimonial {
   background-color: white;
+  border-radius: 16px;
   padding: 1rem;
-  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
+
 
 /* About Section */
 .about {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   align-items: center;
 }
 
 .about .text {
-  flex: 1 1 300px;
+  flex: 1 1 350px;
+}
+
+.about h2 {
+  font-size: 40pt;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 16pt;
+  color: #495e57;
 }
 
 .about .images {
   flex: 1 1 300px;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
+
+.about img {
+  width: 100%;
+  border-radius: 16px;
+}
+
 
 /* Footer */
 footer {
@@ -184,4 +263,15 @@ p {
 
 .card, button, img {
   border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .hero, .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero img, .about .images {
+    margin-top: 2rem;
+  }
 }
