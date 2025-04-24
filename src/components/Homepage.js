@@ -1,7 +1,7 @@
-import CallToAction from './CallToAction';
-import Specials from './Specials';
+import CallToAction from './CallToAction.js';
+import Specials from './Specials.js';
 import CustomersSay from './CustomersSay.js';
-import Chicago from './Chicago';
+import Chicago from './Chicago.js';
 
 function Homepage() {
   return (
