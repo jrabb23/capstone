@@ -1,4 +1,7 @@
-// src/App.test.js
+jest.mock('./api', () => ({
+  fetchAPI: (date) => ["17:00", "18:00", "19:00", "20:00"],
+  submitAPI: (formData) => true
+}));
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
@@ -9,7 +12,5 @@ test('renders the homepage heading', () => {
 });
 
 test('renders the booking page when navigated to', () => {
-  // This may need a navigation trigger since you can't set an initial path
   render(<App />);
-  // optional: simulate nav to /booking and test there
 });

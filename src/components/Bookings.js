@@ -7,9 +7,8 @@ function Bookings() {
   ]);
 
   const updateTimes = (date) => {
-    // You can modify this logic to fetch or filter based on the date
     console.log('Date selected:', date);
-    setAvailableTimes([...availableTimes]); // Placeholder for real logic
+    setAvailableTimes([...availableTimes]); 
   };
 
   return (
