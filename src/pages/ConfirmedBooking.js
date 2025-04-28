@@ -3,9 +3,9 @@ import React from 'react';
 
 function ConfirmedBooking() {
   return (
-    <div className="confirmation">
+    <div className="confirmation" aria-live="polite">
       <h1>Booking Confirmed!</h1>
-      <p>Thank you for your reservation. We look forward to seeing you!</p>
+      <p>Thank you for your reservation. We can't wait to see you!</p>
     </div>
   );
 }
