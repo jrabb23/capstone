@@ -275,3 +275,16 @@ p {
     margin-top: 2rem;
   }
 }
+
+.booking-page main {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.booking-page h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
