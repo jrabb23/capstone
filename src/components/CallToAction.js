@@ -6,7 +6,7 @@ function CallToAction() {
           <p>We are a family-owned Mediterranean restaurant focused on traditional recipes with a modern twist.</p>
           <button>Reserve a Table</button>
         </div>
-        <img src="/images/hero-image.jpg" alt="Delicious food" />
+        <img src="/images/MarioandAndrianA.jpg" alt="Delicious food" />
       </section>
     );
   }
