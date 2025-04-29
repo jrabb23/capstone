@@ -7,30 +7,27 @@ import Footer from './components/Footer';
 import Homepage from './components/Homepage';
 import BookingPage from './pages/BookingPage';
 import { initializeTimes, updateTimes } from './reducers/bookingReducer';
-import ConfirmedBooking from './pages/ConfirmedBooking'; 
-import { submitAPI } from './api'; 
+import ConfirmedBooking from './pages/ConfirmedBooking';
 
 function App() {
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
-  const submitForm = (formData) => {
-    const success = submitAPI(formData);
-    if (success) {
-      navigate('/confirmed');
-    }
-  };
 
   return (
     <Router>
       <Nav />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/booking" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} />} />
+        <Route
+          path="/reservations"
+          element={
+            <BookingPage availableTimes={availableTimes} dispatch={dispatch} />
+          }
+        />
         <Route path="/confirmed" element={<ConfirmedBooking />} />
       </Routes>
       <Footer />
     </Router>
   );
 }
-
 
 export default App;
