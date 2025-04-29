@@ -4,7 +4,7 @@ function Footer () {
             <div className="column">
         <img src="/images/logo.png" alt="Little Lemon logo" />
       </div>
-            <nav className="column">
+            <div className="column">
                 <h4>Pages</h4>
                 <ul>
                 <li><a href="/">Home</a></li>
@@ -14,7 +14,7 @@ function Footer () {
                 <li><a href="/order-online">Order Online</a></li>
                 <li><a href="/login">Login</a></li>
                 </ul>
-            </nav>
+            </div>
             <div className="column">
                 <h4>Contact</h4>
                 <ul>

@@ -49,7 +49,7 @@
   "bugs": {
     "url": "https://github.com/jrabb23/capstone/issues"
   },
-  "homepage": "https://github.com/jrabb23/capstone#readme",
+
   "devDependencies": {
     "jest-environment-jsdom": "^29.7.0"
   }

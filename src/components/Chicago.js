@@ -8,8 +8,7 @@ function Chicago() {
           </p>
         </div>
         <div className="images">
-          <img src="/images/about-1.jpg" alt="Restaurant interior" />
-          <img src="/images/about-2.jpg" alt="Chef preparing food" />
+          <img src="/images/MarioandAdrianA.jpg" alt="Chef preparing food" />
         </div>
       </section>
     );

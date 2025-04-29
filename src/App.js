@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useReducer } from 'react';
+import { useReducer, useState, useEffect } from 'react';
 
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -10,7 +10,21 @@ import { initializeTimes, updateTimes } from './reducers/bookingReducer';
 import ConfirmedBooking from './pages/ConfirmedBooking';
 
 function App() {
-  const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
+  const [availableTimes, dispatch] = useReducer(updateTimes, []);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchTimes() {
+      const times = await initializeTimes();
+      dispatch({ type: 'initialize', times });
+      setLoading(false);
+    }
+    fetchTimes();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>; // <-- You can customize this
+  }
 
   return (
     <Router>

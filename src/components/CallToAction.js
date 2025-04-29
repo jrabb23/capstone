@@ -10,7 +10,7 @@ function CallToAction() {
           <button>Reserve a Table</button>
         </Link>
       </div>
-      <img src="/images/MarioandAndrianA.jpg" alt="Delicious food" />
+      <img src="/images/restauranfood.jpg" alt="Delicious food" />
     </section>
   );
 }
